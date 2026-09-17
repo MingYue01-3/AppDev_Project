@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review and Monitoring System</title>
+</head>
+
+<body>
+
+    <h1>Document Review and Monitoring System</h1>
+
+    <h2>Submit Document for Legal Review</h2>
+
+    <form>
+        <label for="title">Document Title:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="type">Document Type:</label><br>
+        <select id="type" name="type">
+            <option value="MOA">MOA</option>
+            <option value="MOU">MOU</option>
+            <option value="Other">Other Document</option>
+        </select><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="5" cols="40"></textarea><br><br>
+
+        <label for="document">Upload Document:</label><br>
+        <input type="file" id="document" name="document"><br><br>
+
+        <button type="submit">Submit for Review</button>
+    </form>
+
+</body>
+</html>
