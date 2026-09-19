@@ -1,0 +1,259 @@
+  /*General Page Settings*/
+* {
+box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/*Header*/
+
+.header {
+    background-color: #1f3c5b;
+    color:white;
+    padding: 30px20px;
+}
+
+.header h1 {
+  margin:0;
+  font-size: 28px;
+}
+
+.header p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+/*Main Container*/
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/*Cards*/
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0,08);
+}
+
+/*Section Titles*/
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    margin: 0;
+    color: #1f3c5b;
+    font-size: 22px;
+}
+
+.section-title p {
+    margin-top: 6px;
+    color: #666;
+}
+
+/*Form*/
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/*Upload Box*/
+
+.upload-box {
+    border: 2px dashboard #bbb;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-color:#fafafa;
+}
+
+.upload-box input {
+    margin-bottom: 8px;
+}
+
+.upload-box p {
+    margin:5px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+/*Submit*/
+
+.submit-buttom {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1f3c5b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-botton hover {
+    background-color: #162d45;
+}
+
+/*Table*/
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #1f3c5b;
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*Status Labels*/
+
+.status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.review {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.revision {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.approved {
+    background-color: #d4edda;
+    color: #155724
+}
+
+/*Review Progress*/
+
+.progress-container {
+    margin-top: 20px;
+}
+
+.progress-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px; 
+}
+
+.step-number {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.progress-step h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.progress-step p {
+    margin-top: 5px;
+    color: #777;
+    font-size: 14px;
+}
+
+.progress-step.completed .step-number {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.progress-step.active .step-numer {
+    background-color: #1f3c5b;
+    color: white;
+}
+
+.progress-line {
+    height: 25px;
+    border-left: 2px solid#ccc;
+    margin-left: 17px;
+}
+
+/*Footer*/
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 13px;
+}
+
+/*Mobile Responsive Design*/
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    th,
+    td {
+        font-size: 13px;
+        padding: 9px;
+    }
+}

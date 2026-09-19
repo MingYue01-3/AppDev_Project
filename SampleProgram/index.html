@@ -3,73 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Review and Monitoring System</title>
+    <title>Legal Document Review System</title>
+
+    <!-- Connect HTML to CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Document Review and Monitoring System</h1>
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1>Legal Document Review System</h1>
+            <p>Document Submission and Monitoring Portal</p>
+        </div>
+    </header>
 
-    <h2>Submit Document for Legal Review</h2>
 
-    <form>
-        <label for="title">Document Title:</label><br>
-        <input type="text" id="title" name="title"><br><br>
+    <!-- Main Content -->
+    <main class="container">
 
-        <label for="type">Document Type:</label><br>
-        <select id="type" name="type">
-            <option value="MOA">MOA</option>
-            <option value="MOU">MOU</option>
-            <option value="Other">Other Document</option>
-        </select><br><br>
+        <!-- Submission Section -->
+        <section class="card">
 
-        <label for="description">Description:</label><br>
-        <textarea id="description" name="description" rows="5" cols="40"></textarea><br><br>
+            <div class="section-title">
+                <h2>Submit Document for Legal Review</h2>
+                <p>Provide the necessary information and upload your document.</p>
+            </div>
 
-        <label for="document">Upload Document:</label><br>
-        <input type="file" id="document" name="document"><br><br>
+            <form>
 
-        <button type="submit">Submit for Review</button>
-    </form>
+                <div class="form-group">
+                    <label for="title">Document Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Enter document title"
+                    >
+                </div>
 
-    <hr>
 
-    <h2>Document Tracking</h2>
+                <div class="form-group">
+                    <label for="type">Document Type</label>
 
-    <table border="1" cellpadding="10">
-        <tr>
-            <th>Request No.</th>
-            <th>Document</th>
-            <th>Document Type</th>
-            <th>Status</th>
-        </tr>
+                    <select id="type" name="type">
+                        <option value="">Select document type</option>
+                        <option value="MOA">Memorandum of Agreement (MOA)</option>
+                        <option value="MOU">Memorandum of Understanding (MOU)</option>
+                        <option value="Other">Other Document</option>
+                    </select>
+                </div>
 
-        <tr>
-            <td>DR-001</td>
-            <td>Sample Memorandum of Agreement</td>
-            <td>MOA</td>
-            <td>Under Review</td>
-        </tr>
 
-        <tr>
-            <td>DR-002</td>
-            <td>Partnership Agreement</td>
-            <td>MOU</td>
-            <td>For Revision</td>
-        </tr>
-    </table>
+                <div class="form-group">
+                    <label for="description">Description</label>
 
-    <hr>
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="5"
+                        placeholder="Enter a short description of the document"
+                    ></textarea>
+                </div>
 
-    <h2>Document Review Progress</h2>
 
-    <ol>
-        <li>✓ Document Submitted</li>
-        <li>✓ Received by Legal Office</li>
-        <li>● Under Review</li>
-        <li>○ For Revision</li>
-        <li>○ Approved</li>
-    </ol>
+                <div class="form-group">
+                    <label for="document">Upload Document</label>
+
+                    <div class="upload-box">
+                        <input
+                            type="file"
+                            id="document"
+                            name="document"
+                        >
+
+                        <p>Choose a document file to upload</p>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="submit-button">
+                    Submit for Review
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Document Tracking Section -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>Document Tracking</h2>
+                <p>Monitor the current status of submitted documents.</p>
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Request No.</th>
+                            <th>Document</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>DR-001</td>
+                            <td>Sample Memorandum of Agreement</td>
+                            <td>MOA</td>
+                            <td>
+                                <span class="status review">
+                                    Under Review
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>DR-002</td>
+                            <td>Partnership Agreement</td>
+                            <td>MOU</td>
+                            <td>
+                                <span class="status revision">
+                                    For Revision
+                                </span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>DR-003</td>
+                            <td>Office Collaboration Agreement</td>
+                            <td>MOA</td>
+                            <td>
+                                <span class="status approved">
+                                    Approved
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Review Progress Section -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>Document Review Progress</h2>
+                <p>Current progress of the selected document.</p>
+            </div>
+
+
+            <div class="progress-container">
+
+                <div class="progress-step completed">
+                    <div class="step-number">1</div>
+
+                    <div>
+                        <h3>Document Submitted</h3>
+                        <p>The document was submitted for legal review.</p>
+                    </div>
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step completed">
+                    <div class="step-number">2</div>
+
+                    <div>
+                        <h3>Received by Legal Office</h3>
+                        <p>The Legal Office received the submitted document.</p>
+                    </div>
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step active">
+                    <div class="step-number">3</div>
+
+                    <div>
+                        <h3>Under Review</h3>
+                        <p>The document is currently being reviewed.</p>
+                    </div>
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step">
+                    <div class="step-number">4</div>
+
+                    <div>
+                        <h3>For Revision</h3>
+                        <p>Revisions may be requested when necessary.</p>
+                    </div>
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step">
+                    <div class="step-number">5</div>
+
+                    <div>
+                        <h3>Approved</h3>
+                        <p>The document is approved after the review process.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Document Review and Monitoring System | Legal Office</p>
+    </footer>
 
 </body>
 </html>
